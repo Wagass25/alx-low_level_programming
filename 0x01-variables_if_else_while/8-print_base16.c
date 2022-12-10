@@ -18,9 +18,10 @@ int main(void)
 			putchar(d + '0');
 			d++;
 		}
-	while (c <= 'f') {
-		        putchar(c);
-	        	c++;
+	while
+		(c <= 'f') {
+			putchar(c);
+			c++;
 		}
 	putchar('\n');
 	return (0);
