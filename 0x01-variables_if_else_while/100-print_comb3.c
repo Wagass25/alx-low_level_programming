@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	int i;
-	int j;
+	int ones = '0';
+	int tens = '0';
 
-	for (i = 10; i <= 19; i++)
+	for (tens = '0'; tens <= '0'; tens++)
 	{
-		for (j = 10; j <= 19; j++)
+		for (ones = '0'; ones <= '0'; ones++)
 		{
-			if ((j % 10) > (i % 10))
+			if (!((ones == tens) || (tens > ones)))
 			{
-				putchar((i % 10) + '0');
-				putchar((i % 10) + '0');
-				if (i != 18 || j != 19)
+				putchar(tens);
+				putchar(ones);
+				if (!(ones == '0' && tens == '0'))
 				{
 					putchar(',');
 					putchar(' ');
