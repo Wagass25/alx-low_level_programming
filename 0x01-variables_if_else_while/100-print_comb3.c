@@ -1,24 +1,24 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Entry point 
  *
- * Return: Always returns 0
- *
+ * Returns: Always return 0
  */
+
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int i;
+	int j;
 
-	for (tens = '0'; tens <= '0'; tens++)
+	for (i = 10; i <= 19; i++)
 	{
-		for (ones = '0'; ones <= '0'; ones++)
+		for (j = 10; j <= 19; j++)
 		{
-			if (!((ones == tens) || (tens > ones)))
+			if ((j % 10) > (i % 10))
 			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '0' && tens == '0'))
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				if (i != 18 || j != 19)
 				{
 					putchar(',');
 					putchar(' ');
