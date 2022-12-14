@@ -7,7 +7,7 @@ void print_alphabet_x10(void)
 {
 	int x;
 
-	for (x = 0 ; x < 10 ; X++)
+	for (x = 0 ; x < 10 ; x++)
 	{
 	int j;
 
@@ -15,6 +15,6 @@ void print_alphabet_x10(void)
 	{
 	_putchar(j);
 	}
-	_putchar('\n')
+	_putchar('\n');
 	}
 }
