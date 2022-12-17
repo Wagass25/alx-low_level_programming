@@ -4,7 +4,7 @@
  *
  * @n: a character to be checked on
  *
- * Return: 1,0 0r -1 and print their sign
+ * Return: 1 if positive, 0 if zero, -1 if negative
  */
 
 int print_sing(int n)
@@ -19,9 +19,6 @@ if (n == 0)
 _putchar('0');
 return (0);
 }
-else
-{
 _putchar('-');
 return (-1);
-}
 }
