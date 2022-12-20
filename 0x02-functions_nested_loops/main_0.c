@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	print_times_table(2);
+	print_times_table(void);
 	return (0);
 }
