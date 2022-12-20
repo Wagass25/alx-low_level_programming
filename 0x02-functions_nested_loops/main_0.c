@@ -1,5 +1,4 @@
 #include <limits.h>
-
 #include "main.h"
 /**
  * main - check the codes for Holberton school sstudents
@@ -10,9 +9,7 @@ int main(void)
 {
 int r;
 
-
-
-r = print_sign(98);
+r = print_times_table(2);
 
 if (r < 0)
 r *= -1;
