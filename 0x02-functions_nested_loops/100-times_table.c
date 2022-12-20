@@ -1,50 +1,49 @@
 #include "main.h"
 
 /**
- * print_times_table - times table function
- * @n: integer to return
+ * print_times_table - prints the n times table
+ * @n: integer
+ * Return: Always 0 (success)
  */
+
 void print_times_table(int n)
 {
-int i;
-int j;
+	int a = 0, b, c;
 
-if (n <= 15 && n >= 0)
-{
-for (i = 0; i <= n; i++)
-{
-for (j = 0; j <= n; j++)
-{
-int prod = j * i;
-if (j == 0)
-{
-_putchar('0');
-}
-else if (prod <= 9)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(' ');
-_putchar('0' + prod);
-}
-else if (prod > 99)
-{
-_putchar(',');
-_putchar(' ');
-_putchar('0' + (prod / 100));
-_putchar('0' + ((prod / 10) % 10));
-_putchar('0' + (prod % 10));
-}
-else
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar('0' + (prod / 10));
-_putchar('0' + (prod % 10));
-}
-}
-_putchar('\n');
-}
+	if (n < 0 || n > 15)
+		return;
+	while (a <= n)
+	{
+		for (b = 0; b <= n; b++)
+		{
+			c = a * b;
+			if (b == 0)
+				_putchar('0' + c);
+			else if (c < 10)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + c);
+			}
+			else if (c < 100)
+			{
+				_putchar(' ');
+				_putchar('0' + c / 10);
+				_putchar('0' + c % 10);
+			}
+			else
+			{
+				_putchar('0' + (c / 100) / 10);
+				_putchar('0' + c - 100);
+				_putchar('0' + c % 10);
+			}
+			if (b < n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+		_putchar('\n');
+		a++;
+	}
 }
